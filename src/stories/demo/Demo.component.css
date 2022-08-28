@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5 {
+    margin-bottom: 5px;
+}
+
+.container-medium {
+    max-width: 300px;
+}
+
+.container-small {
+    margin-right: 6px;
+}
+
+.cb {
+    margin-bottom: 2px;
+    display: block;
+}
+
+.cc {
+    width: 200px;
+}
+
+.cd {
+    width: 600px;
+}
