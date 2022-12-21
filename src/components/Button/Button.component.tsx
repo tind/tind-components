@@ -1,4 +1,5 @@
 import React from "react";
+import './Button.component.css';
 import { Button as PRButton } from 'primereact/button';
 
 interface ButtonProps {
