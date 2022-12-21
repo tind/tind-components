@@ -3,7 +3,7 @@ import './Button.component.css';
 import { Button as PRButton } from 'primereact/button';
 
 interface ButtonProps {
-  type: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'help';
+  type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'help';
   size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
