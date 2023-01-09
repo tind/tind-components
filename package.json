@@ -1,5 +1,5 @@
 {
-  "name": "tind-components",
+  "name": "@tindtechnologies/tind-components",
   "version": "0.0.4",
   "scripts": {
     "start": "nodemon",
@@ -31,5 +31,17 @@
   "dependencies": {
     "primeicons": "^6.0.1",
     "primereact": "^8.7.3"
-  }
+  },
+  "description": "Based on [PrimeReact](https://www.primefaces.org/primereact)",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tind/tind-components.git"
+  },
+  "author": "Ante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tind/tind-components/issues"
+  },
+  "homepage": "https://github.com/tind/tind-components#readme"
 }

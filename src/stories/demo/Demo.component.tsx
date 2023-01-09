@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Demo.component.css';
+import * as tableDataSmall from './assets/table-data-small.json'
 import { InputText } from "../../components/InputText";
 import { Button } from '../../components/Button';
 import { SelectButton } from "../../components/SelectButton";
@@ -8,6 +9,7 @@ import { Dropdown } from "../../components/Dropdown";
 import { Chips } from "../../components/Chips";
 import { Calendar } from "../../components/Calendar";
 import { ButtonSet } from "../../components/ButtonSet";
+import { Column, Table } from '../../components/Table';
 
 interface DemoProps {
     theme: 'primereact/resources/themes/bootstrap4-light-blue/theme.css' | 'primereact/resources/themes/bootstrap4-light-purple/theme.css' | 'primereact/resources/themes/bootstrap4-dark-blue/theme.css' | 'primereact/resources/themes/bootstrap4-dark-purple/theme.css' | 'primereact/resources/themes/md-light-indigo/theme.css' | 'primereact/resources/themes/md-light-deeppurple/theme.css' | 'primereact/resources/themes/md-dark-indigo/theme.css' | 'primereact/resources/themes/md-dark-deeppurple/theme.css' | 'primereact/resources/themes/mdc-light-indigo/theme.css' | 'primereact/resources/themes/mdc-light-deeppurple/theme.css' | 'primereact/resources/themes/mdc-dark-indigo/theme.css' | 'primereact/resources/themes/mdc-dark-deeppurple/theme.css' | 'primereact/resources/themes/tailwind-light/theme.css' | 'primereact/resources/themes/fluent-light/theme.css' | 'primereact/resources/themes/lara-light-blue/theme.css' | 'primereact/resources/themes/lara-light-indigo/theme.css' | 'primereact/resources/themes/lara-light-purple/theme.css' | 'primereact/resources/themes/lara-light-teal/theme.css' | 'primereact/resources/themes/lara-dark-blue/theme.css' | 'primereact/resources/themes/lara-dark-indigo/theme.css' | 'primereact/resources/themes/lara-dark-purple/theme.css' | 'primereact/resources/themes/lara-dark-teal/theme.css' | 'primereact/resources/themes/saga-blue/theme.css' | 'primereact/resources/themes/saga-green/theme.css' | 'primereact/resources/themes/saga-orange/theme.css' | 'primereact/resources/themes/saga-purple/theme.css' | 'primereact/resources/themes/vela-blue/theme.css' | 'primereact/resources/themes/vela-green/theme.css' | 'primereact/resources/themes/vela-orange/theme.css' | 'primereact/resources/themes/vela-purple/theme.css' | 'primereact/resources/themes/arya-blue/theme.css' | 'primereact/resources/themes/arya-green/theme.css' | 'primereact/resources/themes/arya-orange/theme.css' | 'primereact/resources/themes/arya-purple/theme.css' | 'primereact/resources/themes/nova/theme.css' | 'primereact/resources/themes/nova-alt/theme.css' | 'primereact/resources/themes/nova-accent/theme.css' | 'primereact/resources/themes/luna-amber/theme.css' | 'primereact/resources/themes/luna-blue/theme.css' | 'primereact/resources/themes/luna-green/theme.css' | 'primereact/resources/themes/luna-pink/theme.css' | 'primereact/resources/themes/rhea/theme.css'
@@ -19,6 +21,14 @@ export const Demo = ({ theme }: DemoProps) => {
     const [dropdownValue, setDropdownValue] = useState(undefined);
     const [chipsValue, setChipsValue] = useState(["First Chip"] as string[]);
     const [calendarValue, setCalendarValue] = useState();
+    const [tableData, setTableData] = useState(tableDataSmall.data.splice(0, 10));
+
+    const tableActions = <>
+        <ButtonSet>
+            <Button type="success" label="Buy" size="small"></Button>
+            <Button type="secondary" label="Reserve" size="small"></Button>
+        </ButtonSet>
+    </>
 
     console.log(theme);
 
@@ -126,7 +136,7 @@ export const Demo = ({ theme }: DemoProps) => {
                     <h1>Input Group (Input+Button)</h1>
 
                     <h4 />
-                    <div className="p-inputgroup" style={{"width": "400px"}}>
+                    <div className="p-inputgroup" style={{ "width": "400px" }}>
                         <InputText placeholder="Keyword" />
                         <Button type="primary" label="Search" />
                     </div>
@@ -147,6 +157,9 @@ export const Demo = ({ theme }: DemoProps) => {
                 <span className="container-small"><Button type="primary" label="Small" size="small" /></span>
                 <span className="container-small"><Button type="primary" label="Medium" size="medium" /></span>
                 <span className="container-small"><Button type="primary" label="Large" size="large" /></span>
+                <h4>Icons</h4>
+                <span className="container-small"><Button type="primary" icon="pi pi-check" /></span>
+                <span className="container-small"><Button type="primary" label="Save" icon="pi pi-check" /></span>
                 <h4>Button Set</h4>
                 <ButtonSet>
                     <Button type="primary" label="First" />
@@ -155,8 +168,16 @@ export const Demo = ({ theme }: DemoProps) => {
                 </ButtonSet>
             </section>
             <section>
-
-
+                <h1>Table</h1>
+                <div style={{ "width": "90%", margin: "15px" }}>
+                    <Table data={tableData}>
+                        <Column field="id" header="#"></Column>
+                        <Column field="code" header="Code"></Column>
+                        <Column field="name" header="Name"></Column>
+                        <Column field="quantity" header="Quantity"></Column>
+                        <Column field="" header="" body={tableActions}></Column>
+                    </Table>
+                </div>
             </section>
         </>
     );

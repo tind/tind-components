@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from '../components/Button';
 
 import "primereact/resources/themes/saga-blue/theme.css";  //theme
-import "primereact/resources/primereact.min.css";  
+import "primereact/resources/primereact.min.css"; 
 
 export default {
   title: 'Components/Button',
@@ -38,4 +38,10 @@ export const Small = Template.bind({});
 Small.args = {
   ...defaultArgs,
   size: 'small',
+};
+
+export const Icon = Template.bind({});
+Small.args = {
+  ...defaultArgs,
+  icon: 'pi pi-check'
 };

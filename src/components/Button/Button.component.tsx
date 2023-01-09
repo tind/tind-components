@@ -1,11 +1,15 @@
 import React from "react";
 import './Button.component.css';
 import { Button as PRButton } from 'primereact/button';
+ 
+import "primeicons/primeicons.css";
 
 interface ButtonProps {
   type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'help';
   size?: 'small' | 'medium' | 'large';
-  label: string;
+  label?: string;
+  icon?: string;
+  iconPosition?: 'left' | 'right'
   onClick?: () => void;
 }
 
@@ -26,7 +30,9 @@ function getButtonSizeClass(size: string) {
 export const Button = ({
   type = 'primary',
   size = 'medium',
-  label,
+  label = '',
+  icon,
+  iconPosition = 'left',
   onClick
 }: ButtonProps) => {
   const classList = `tc-button-${type} tc-button-${size} p-button-${type} ${getButtonSizeClass(size)}`;
@@ -36,6 +42,8 @@ export const Button = ({
       label={label}
       className={classList}
       onClick={onClick}
+      icon={icon}
+      iconPos={iconPosition}
     />
   );
 };
