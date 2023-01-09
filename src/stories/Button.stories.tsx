@@ -41,7 +41,7 @@ Small.args = {
 };
 
 export const Icon = Template.bind({});
-Small.args = {
+Icon.args = {
   ...defaultArgs,
   icon: 'pi pi-check'
 };
