@@ -21,6 +21,8 @@ npm run storybook
 
 CI/CD pipeline will automatically trigger a build & deploy jobs on every push or merge to `master` branch. 
 
+If for whatever reason the build doesn't start automatically, you can trigger it manually through this [AWS CodeBuild job.](https://eu-north-1.console.aws.amazon.com/codesuite/codebuild/projects/tind-2-storybook-build/details)
+
 Deployed storybook will be available on https://storybook.tind.io
 
 ## Publishing
