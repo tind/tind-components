@@ -7,7 +7,7 @@ import * as tableDataMedium from './demo/assets/table-data-medium.json';
 import { Button } from '../components/Button';
 import { ButtonSet } from '../components/ButtonSet';
 
-import "primereact/resources/themes/saga-blue/theme.css";  //theme
+import "./assets/theme.css"; // theme
 import "primereact/resources/primereact.min.css";
 
 export default {
@@ -80,8 +80,10 @@ const PaginatorTemplate: ComponentStory<typeof Table> = (args) => {
     const [selection, setSelection] = useState(null);
     const tableActions = <>
         <ButtonSet>
-            <Button type="success" label="Buy" size="small"></Button>
-            <Button type="secondary" label="Reserve" size="small"></Button>
+            <Button type="primary" label="View" icon='pi pi-eye' size="small" outlined={true}></Button>
+            <Button type="primary" label="Edit" icon='pi pi-pencil' size="small" outlined={true}></Button>
+            <Button type="primary" label="Delete" icon="pi pi-trash" size="small" outlined={true}></Button>
+            <Button type="primary" label="Unpublish" icon="pi pi-file-excel" size="small" outlined={true}></Button>
         </ButtonSet>
     </>
 
@@ -89,27 +91,15 @@ const PaginatorTemplate: ComponentStory<typeof Table> = (args) => {
         <Table data={tableData} selection={selection} onSelectionChange={(e: any) => setSelection(e.value)} paginator>
             <Column selectionMode="multiple"></Column>
             <Column field="id" header="#"></Column>
-            <Column field="code" header="Code"></Column>
-            <Column field="name" header="Name"></Column>
-            <Column field="quantity" header="Quantity"></Column>
+            <Column field="nameOfThePage" header="Name of the page"></Column>
+            <Column field="content" header="Content"></Column>
+            <Column field="language" header="Language"></Column>
+            <Column field="created" header="Created" sortable={true}></Column>
+            <Column field="modified" header="Modified" sortable={true}></Column>
+            <Column field="status" header="Status" sortable={true}></Column>
             <Column body={tableActions}></Column>
         </Table>
     )
 };
 
 export const WithPaginator = PaginatorTemplate.bind({});
-
-// const PaginatorTemplate: ComponentStory<typeof Table> = (args) => {
-//     const [tableData, setTableData] = useState(tableDataSmall.data);
-
-//     return (
-//         <Table data={tableData}>
-//             <Column field="id" header="#"></Column>
-//             <Column field="code" header="Code"></Column>
-//             <Column field="name" header="Name"></Column>
-//             <Column field="quantity" header="Quantity"></Column>
-//         </Table>
-//     )
-// };
-
-// export const WithPaginator = PaginatorTemplate.bind({});

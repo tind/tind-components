@@ -638,8 +638,8 @@
   background: #216DA0;
 }
 .p-checkbox .p-checkbox-box.p-highlight:not(.p-disabled):hover {
-  border-color: #0b7ad1;
-  background: #0b7ad1;
+  border-color: #3378A6;
+  background: #3378A6;
   color: #ffffff;
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
@@ -652,8 +652,8 @@
   border-color: #216DA0;
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-  border-color: #0b7ad1;
-  background: #0b7ad1;
+  border-color: #3378A6;
+  background: #3378A6;
   color: #ffffff;
 }
 .p-checkbox.p-invalid > .p-checkbox-box {
@@ -670,7 +670,7 @@
   background-color: #f8f9fa;
 }
 .p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-  background: #0b7ad1;
+  background: #3378A6;
 }
 
 .p-chips .p-chips-multiple-container {
@@ -1057,7 +1057,7 @@
   background: #ffffff;
 }
 .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
-  background: #0d89ec;
+  background: #3378A6;
 }
 .p-inputswitch.p-invalid .p-inputswitch-slider {
   border-color: #CA3F3F;
@@ -1481,8 +1481,8 @@
   background: #216DA0;
 }
 .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
-  border-color: #0b7ad1;
-  background: #0b7ad1;
+  border-color: #3378A6;
+  background: #3378A6;
   color: #ffffff;
 }
 .p-radiobutton.p-invalid > .p-radiobutton-box {
@@ -1502,7 +1502,7 @@
   background: #216DA0;
 }
 .p-input-filled .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
-  background: #0b7ad1;
+  background: #3378A6;
 }
 
 .p-rating {
@@ -1560,8 +1560,8 @@
   color: #ffffff;
 }
 .p-selectbutton .p-button.p-highlight:hover {
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
   color: #ffffff;
 }
 .p-selectbutton .p-button.p-highlight:hover .p-button-icon-left,
@@ -1755,8 +1755,8 @@
   color: #ffffff;
 }
 .p-togglebutton.p-button.p-highlight:hover {
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
   color: #ffffff;
 }
 .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
@@ -1777,14 +1777,14 @@
   border-radius: 3px;
 }
 .p-button:enabled:hover, .p-button:not(button):not(a):not(.p-disabled):hover {
-  background: #0d89ec;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0d89ec;
+  border-color: #3378A6;
 }
 .p-button:enabled:active, .p-button:not(button):not(a):not(.p-disabled):active {
-  background: #0b7ad1;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0b7ad1;
+  border-color: #3378A6;
 }
 .p-button.p-button-outlined {
   background-color: transparent;
@@ -2220,13 +2220,13 @@
 }
 
 .p-button.p-button-link {
-  color: #0b7ad1;
+  color: #3378A6;
   background: transparent;
   border: transparent;
 }
 .p-button.p-button-link:enabled:hover, .p-button.p-button-link:not(button):not(a):not(.p-disabled):hover {
   background: transparent;
-  color: #0b7ad1;
+  color: #3378A6;
   border-color: transparent;
 }
 .p-button.p-button-link:enabled:hover .p-button-label, .p-button.p-button-link:not(button):not(a):not(.p-disabled):hover .p-button-label {
@@ -2239,7 +2239,7 @@
 }
 .p-button.p-button-link:enabled:active, .p-button.p-button-link:not(button):not(a):not(.p-disabled):active {
   background: transparent;
-  color: #0b7ad1;
+  color: #3378A6;
   border-color: transparent;
 }
 
@@ -3071,8 +3071,8 @@
   border-right: 1px solid #dee2e6;
 }
 .fc.fc-unthemed .fc-view-container .fc-event {
-  background: #0d89ec;
-  border: 1px solid #0d89ec;
+  background: #3378A6;
+  border: 1px solid #3378A6;
   color: #ffffff;
 }
 .fc.fc-unthemed .fc-view-container .fc-divider {
@@ -3090,14 +3090,14 @@
   align-items: center;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button:enabled:hover {
-  background: #0d89ec;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0d89ec;
+  border-color: #3378A6;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button:enabled:active {
-  background: #0b7ad1;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0b7ad1;
+  border-color: #3378A6;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button:enabled:active:focus {
   outline: 0 none;
@@ -3142,8 +3142,8 @@
   color: #ffffff;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button.fc-dayGridMonth-button.fc-button-active:hover, .fc.fc-unthemed .fc-toolbar .fc-button.fc-timeGridWeek-button.fc-button-active:hover, .fc.fc-unthemed .fc-toolbar .fc-button.fc-timeGridDay-button.fc-button-active:hover {
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
   color: #ffffff;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button.fc-dayGridMonth-button:focus, .fc.fc-unthemed .fc-toolbar .fc-button.fc-timeGridWeek-button:focus, .fc.fc-unthemed .fc-toolbar .fc-button.fc-timeGridDay-button:focus {
@@ -3226,15 +3226,15 @@
 }
 .fc.fc-theme-standard .fc-view-harness .fc-event.fc-daygrid-block-event {
   color: #ffffff;
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
 }
 .fc.fc-theme-standard .fc-view-harness .fc-event.fc-daygrid-block-event .fc-event-main {
   color: #ffffff;
 }
 .fc.fc-theme-standard .fc-view-harness .fc-event.fc-daygrid-dot-event .fc-daygrid-event-dot {
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
 }
 .fc.fc-theme-standard .fc-view-harness .fc-event.fc-daygrid-dot-event:hover {
   background: #e9ecef;
@@ -3252,14 +3252,14 @@
   border-radius: 3px;
 }
 .fc.fc-theme-standard .fc-toolbar .fc-button:enabled:hover {
-  background: #0d89ec;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0d89ec;
+  border-color: #3378A6;
 }
 .fc.fc-theme-standard .fc-toolbar .fc-button:enabled:active {
-  background: #0b7ad1;
+  background: #3378A6;
   color: #ffffff;
-  border-color: #0b7ad1;
+  border-color: #3378A6;
 }
 .fc.fc-theme-standard .fc-toolbar .fc-button:enabled:active:focus {
   outline: 0 none;
@@ -3310,8 +3310,8 @@
   color: #ffffff;
 }
 .fc.fc-theme-standard .fc-toolbar .fc-button.fc-dayGridMonth-button.fc-button-active:hover, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridWeek-button.fc-button-active:hover, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridDay-button.fc-button-active:hover {
-  background: #0d89ec;
-  border-color: #0d89ec;
+  background: #3378A6;
+  border-color: #3378A6;
   color: #ffffff;
 }
 .fc.fc-theme-standard .fc-toolbar .fc-button.fc-dayGridMonth-button:not(:disabled):focus, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridWeek-button:not(:disabled):focus, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridDay-button:not(:disabled):focus {
@@ -4378,7 +4378,7 @@
   right: -1rem;
 }
 .p-overlaypanel .p-overlaypanel-close:enabled:hover {
-  background: #0d89ec;
+  background: #3378A6;
   color: #ffffff;
 }
 .p-overlaypanel:after {

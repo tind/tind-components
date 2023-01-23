@@ -1,12 +1,12 @@
 {
   "name": "@tindtechnologies/tind-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "start": "nodemon",
     "build": "npm run build:mac",
     "build:windows": "rmdir /s dist && tsc && copy package.json dist && copy README.md dist",
     "build:mac": "rm -rf ./dist && tsc && cp package.json ./dist",
-    "_publish": "npm publish ./dist",
+    ":publish": "npm publish ./dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

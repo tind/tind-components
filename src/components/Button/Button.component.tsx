@@ -7,6 +7,7 @@ import "primeicons/primeicons.css";
 interface ButtonProps {
   type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'help';
   size?: 'small' | 'medium' | 'large';
+  outlined?: boolean;
   label?: string;
   icon?: string;
   iconPosition?: 'left' | 'right'
@@ -30,12 +31,13 @@ function getButtonSizeClass(size: string) {
 export const Button = ({
   type = 'primary',
   size = 'medium',
+  outlined = false,
   label = '',
   icon,
   iconPosition = 'left',
   onClick
 }: ButtonProps) => {
-  const classList = `tc-button-${type} tc-button-${size} p-button-${type} ${getButtonSizeClass(size)}`;
+  const classList = `tc-button-${type} tc-button-${size} p-button-${type} ${getButtonSizeClass(size)} ${outlined ? 'p-button-outlined' : ''}`;
 
   return (
     <PRButton

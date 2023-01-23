@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Checkbox } from '../components/Checkbox';
 
-import "primereact/resources/themes/saga-blue/theme.css";  //theme
+import "./assets/theme.css"; // theme
 import "primereact/resources/primereact.min.css";  
 import "primeicons/primeicons.css";
 

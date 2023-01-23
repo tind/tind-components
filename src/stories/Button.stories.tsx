@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from '../components/Button';
 
-import "primereact/resources/themes/saga-blue/theme.css";  //theme
+import "./assets/theme.css"; // theme
 import "primereact/resources/primereact.min.css"; 
 
 export default {
