@@ -11,32 +11,56 @@ export default {
     component: ButtonSet,
 } as ComponentMeta<typeof ButtonSet>;
 
-const Template: ComponentStory<typeof ButtonSet> = (args) => (
-    <ButtonSet {...args}>
-        <Button type="primary" label="First"></Button>
-        <Button type="primary" label="Second"></Button>
-        <Button type="primary" label="Third"></Button>
+const Template: ComponentStory<typeof ButtonSet> = (args: any) => (
+    <ButtonSet>
+        {args.buttons.map((arg: any) => {
+            return <Button {...arg}></Button>
+        })}
     </ButtonSet>
 );
+const defaultArgs = {
+    buttons: [
+        { type: "primary", label: "First" },
+        { type: "primary", label: "Second" },
+        { type: "primary", label: "Third" }
+    ]
+};
 
 export const Default = Template.bind({});
+Default.args = defaultArgs;
 
-const TemplateSmall: ComponentStory<typeof ButtonSet> = (args) => (
-    <ButtonSet {...args}>
-        <Button type="primary" label="First" size="small"></Button>
-        <Button type="primary" label="Second" size="small"></Button>
-        <Button type="primary" label="Third" size="small"></Button>
-    </ButtonSet>
-);
+export const Small = Template.bind({});
+Small.args = {
+    buttons: [
+        { type: "primary", label: "First", size: "small" },
+        { type: "primary", label: "Second", size: "small" },
+        { type: "primary", label: "Third", size: "small" }
+    ]
+};
 
-export const Small = TemplateSmall.bind({});
+export const Large = Template.bind({});
+Large.args = {
+    buttons: [
+        { type: "primary", label: "First", size: "large" },
+        { type: "primary", label: "Second", size: "large" },
+        { type: "primary", label: "Third", size: "large" }
+    ]
+};
 
-const TemplateLarge: ComponentStory<typeof ButtonSet> = (args) => (
-    <ButtonSet {...args}>
-        <Button type="primary" label="First" size="large"></Button>
-        <Button type="primary" label="Second" size="large"></Button>
-        <Button type="primary" label="Third" size="large"></Button>
-    </ButtonSet>
-);
+export const Outlined = Template.bind({});
+Outlined.args = {
+    buttons: [
+        { type: "primary", label: "First", outlined: true },
+        { type: "primary", label: "Second", outlined: true },
+        { type: "primary", label: "Third", outlined: true }
+    ]
+};
 
-export const Large = TemplateLarge.bind({});
+export const OutlinedSmall = Template.bind({});
+OutlinedSmall.args = {
+    buttons: [
+        { type: "primary", label: "First", outlined: true, size: "small" },
+        { type: "primary", label: "Second", outlined: true, size: "small" },
+        { type: "primary", label: "Third", outlined: true, size: "small" }
+    ]
+};

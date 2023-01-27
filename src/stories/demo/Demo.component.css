@@ -10,6 +10,10 @@ h1,h2,h3,h4,h5 {
     margin-right: 6px;
 }
 
+.container-small Button {
+    margin-bottom: 4px;
+}
+
 .cb {
     margin-bottom: 2px;
     display: block;

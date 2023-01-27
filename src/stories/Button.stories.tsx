@@ -45,3 +45,9 @@ Icon.args = {
   ...defaultArgs,
   icon: 'pi pi-check'
 };
+
+export const Outlined = Template.bind({});
+Outlined.args = {
+  ...defaultArgs,
+  outlined: true
+};

@@ -155,6 +155,14 @@ export const Demo = () => {
                 <span className="container-small"><Button type="warning" label="Warning" /></span>
                 <span className="container-small"><Button type="help" label="Help" /></span>
                 <span className="container-small"><Button type="danger" label="Danger" /></span>
+                <h4>Outlined</h4>
+                <span className="container-small"><Button type="primary" label="Primary" outlined={true} /></span>
+                <span className="container-small"><Button type="secondary" label="Secondary" outlined={true} /></span>
+                <span className="container-small"><Button type="success" label="Success" outlined={true} /></span>
+                <span className="container-small"><Button type="info" label="Info" outlined={true} /></span>
+                <span className="container-small"><Button type="warning" label="Warning" outlined={true} /></span>
+                <span className="container-small"><Button type="help" label="Help" outlined={true} /></span>
+                <span className="container-small"><Button type="danger" label="Danger" outlined={true} /></span>
                 <h4>Sizes</h4>
                 <span className="container-small"><Button type="primary" label="Small" size="small" /></span>
                 <span className="container-small"><Button type="primary" label="Medium" size="medium" /></span>
@@ -167,6 +175,12 @@ export const Demo = () => {
                     <Button type="primary" label="First" />
                     <Button type="primary" label="Second" />
                     <Button type="primary" label="Third" />
+                </ButtonSet>
+                <h4>Button Set Outlined</h4>
+                <ButtonSet>
+                    <Button type="primary" label="First" outlined={true} />
+                    <Button type="primary" label="Second" outlined={true} />
+                    <Button type="primary" label="Third" outlined={true} />
                 </ButtonSet>
             </section>
             <section>
