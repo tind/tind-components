@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { AutoComplete } from '../components/AutoComplete';
-// import { AutoComplete } from "primereact/autocomplete";
 
 import "./assets/theme.css"; // theme
 import "primereact/resources/primereact.min.css";
