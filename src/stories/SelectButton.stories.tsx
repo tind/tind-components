@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { SelectButton } from '../components/SelectButton';
 
@@ -10,7 +10,17 @@ export default {
   component: SelectButton,
 } as ComponentMeta<typeof SelectButton>;
 
-const Template: ComponentStory<typeof SelectButton> = (args) => <SelectButton {...args} />;
+const Template: ComponentStory<typeof SelectButton> = (args) => {
+  const [value, setValue] = useState('');
+  
+  useEffect(() => {
+    if (args.value) {
+      setValue(args.value);
+    }
+  }, []);
+
+  return <SelectButton {...args} value={value} onChange={(e) => setValue(e.value)}/>
+};
 const defaultArgs = {
   options: [
     { label: 'Option 1', value: 1 },

@@ -1,10 +1,10 @@
 import React from "react";
-import { SelectButton as PRSelectButton } from 'primereact/selectbutton';
+import { SelectButton as PRSelectButton, SelectButtonChangeParams } from 'primereact/selectbutton';
 
 interface SelectButtonProps {
     options: { label: string, value: any }[];
     value?: any;
-    onChange?: (event: any) => void;
+    onChange?: (e: SelectButtonChangeParams) => void;
 }
 
 export const SelectButton = ({
