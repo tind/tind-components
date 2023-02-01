@@ -3,12 +3,14 @@ import './ButtonSet.component.css';
 
 interface ButtonSetProps {
   children?: any;
+  className?: string;
 }
 
 export const ButtonSet = ({
-  children
+  children,
+  className
 }: ButtonSetProps) => {
-  const classList = `tc-button-set p-buttonset`;
+  const classList = `${className} tc-button-set p-buttonset`;
 
   return (
     <>

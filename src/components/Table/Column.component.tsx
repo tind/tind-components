@@ -8,6 +8,7 @@ interface ColumnProps {
   body?: JSX.Element;
   selectionMode?: 'single' | 'multiple';
   sortable?: boolean;
+  classes?: string;
 }
 
 export const Column = ({
@@ -15,9 +16,11 @@ export const Column = ({
   header,
   body,
   selectionMode = "multiple",
-  sortable = false
+  sortable = false,
+  classes
 }: ColumnProps) => {
-  const classList = `tc-column`;
+  const classList = `${classes} tc-column`;
+  console.log(classList);
 
   return (
     <PRColumn className={classList} field={field} header={header} body={body} selectionMode={selectionMode} sortable={sortable}></PRColumn>

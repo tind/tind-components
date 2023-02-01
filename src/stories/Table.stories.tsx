@@ -8,6 +8,7 @@ import { Button } from '../components/Button';
 import { ButtonSet } from '../components/ButtonSet';
 
 import "./assets/theme.css"; // theme
+import "./assets/stories.css"; // theme
 import "primereact/resources/primereact.min.css";
 
 export default {
@@ -79,7 +80,7 @@ const PaginatorTemplate: ComponentStory<typeof Table> = (args) => {
     const [tableData, setTableData] = useState(tableDataMedium.data);
     const [selection, setSelection] = useState(null);
     const tableActions = <>
-        <ButtonSet>
+        <ButtonSet className="m-w-400">
             <Button type="primary" label="View" icon='pi pi-eye' size="small" outlined={true}></Button>
             <Button type="primary" label="Edit" icon='pi pi-pencil' size="small" outlined={true}></Button>
             <Button type="primary" label="Delete" icon="pi pi-trash" size="small" outlined={true}></Button>
