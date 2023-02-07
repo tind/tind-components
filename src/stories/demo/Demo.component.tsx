@@ -139,7 +139,7 @@ export const Demo = () => {
 
                     <h4 />
                     <div className="p-inputgroup" style={{ "width": "400px" }}>
-                        <InputText placeholder="Keyword" />
+                        <InputText placeholder="Keyword" className={"input-grp-demo"} />
                         <Button type="primary" label="Search" />
                     </div>
                 </section>

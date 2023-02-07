@@ -10,7 +10,7 @@ export default {
   component: Demo,
 } as ComponentMeta<typeof Demo>;
 
-const Template: ComponentStory<typeof Demo> = (args) => <Demo {...args} />;
+const Template: ComponentStory<typeof Demo> = (args: any) => <Demo {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

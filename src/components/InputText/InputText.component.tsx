@@ -9,6 +9,7 @@ interface SelectButtonProps {
   size?: 'small' | 'medium' | 'large',
   iconPosition?: 'left' | 'right',
   icon?: string | undefined,
+  className?: string | undefined,
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
@@ -37,9 +38,10 @@ export const InputText = ({
   iconPosition = 'left',
   icon = undefined,
   size = 'medium',
+  className = '',
   onChange
 }: SelectButtonProps) => {
-  const classList = ["tc-inputtext", "block", getSizeClass(size), getErrorClass(error)].join(' ');
+  const classList = ["tc-inputtext", "block", getSizeClass(size), getErrorClass(error), className].join(' ');
   const iconClassList = [(icon && iconPosition == 'left') ? 'p-input-icon-left' : '', (icon && iconPosition == 'right') ? 'p-input-icon-right' : ''].join(' ');
 
   return (
