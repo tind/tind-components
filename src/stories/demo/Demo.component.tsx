@@ -32,25 +32,6 @@ export const Demo = () => {
         </ButtonSet>
     </>
 
-    // console.log(theme);
-
-    // let links = document.querySelector(`head`)?.getElementsByTagName("link");
-    // if (links) {
-    //     for (let i = 0; i < links?.length; i++) {
-    //         if (links[i].type == 'text/css' && links[i].rel == 'stylesheet' && links[i].href.includes('primereact')) {
-    //             document.querySelector(`head`)?.removeChild(links[i]);
-    //         }
-    //     }
-    //     var baseref = document.createElement("base");
-    //     baseref.href = "/";
-    //     var fileref = document.createElement("link");
-    //     fileref.rel = "stylesheet";
-    //     fileref.type = "text/css";
-    //     fileref.href = theme;
-    //     document.getElementsByTagName("head")[0].appendChild(baseref);
-    //     document.getElementsByTagName("head")[0].appendChild(fileref);
-    // }
-
     const checkboxChange = (e: any) => {
         if (checkboxValues.includes(e.value)) {
             setCheckboxValues(
@@ -88,6 +69,10 @@ export const Demo = () => {
                 <section className='container-medium'>
                     <h4>Large</h4>
                     <InputText placeholder="Search..." size="large"></InputText>
+                </section>
+                <section className='container-medium float-label-input'>
+                    <h4>Float Label</h4>
+                    <InputText label="Search"></InputText>
                 </section>
             </section>
             <section style={{ "maxWidth": "50%", "width": "50%", "float": "right" }}>

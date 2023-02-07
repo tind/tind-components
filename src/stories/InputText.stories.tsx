@@ -10,7 +10,7 @@ export default {
   component: InputText,
 } as ComponentMeta<typeof InputText>;
 
-const Template: ComponentStory<typeof InputText> = (args) => <div style={{ width: "300px" }}><InputText {...args} /></div>;
+const Template: ComponentStory<typeof InputText> = (args) => <div style={{ width: "300px", marginTop: "10px" }}><InputText {...args} /></div>;
 const defaultArgs = {};
 
 export const Default = Template.bind({});
@@ -47,3 +47,9 @@ Small.args = {
   ...defaultArgs,
   size: 'small',
 };
+
+export const FloatLabel = Template.bind({});
+FloatLabel.args = {
+  ...defaultArgs,
+  label: 'Search'
+}

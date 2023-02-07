@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler } from "react";
 import './InputText.component.css';
 import { InputText as PRInputText } from 'primereact/inputtext';
+import { generateID } from '../index';
 
 interface SelectButtonProps {
   placeholder?: string;
@@ -10,6 +11,7 @@ interface SelectButtonProps {
   iconPosition?: 'left' | 'right',
   icon?: string | undefined,
   className?: string | undefined,
+  label?: string | undefined,
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
@@ -39,16 +41,18 @@ export const InputText = ({
   icon = undefined,
   size = 'medium',
   className = '',
+  label = undefined,
   onChange
 }: SelectButtonProps) => {
   const classList = ["tc-inputtext", "block", getSizeClass(size), getErrorClass(error), className].join(' ');
-  const iconClassList = [(icon && iconPosition == 'left') ? 'p-input-icon-left' : '', (icon && iconPosition == 'right') ? 'p-input-icon-right' : ''].join(' ');
+  const iconClassList = [(icon && iconPosition == 'left') ? 'p-input-icon-left' : '', (icon && iconPosition == 'right') ? 'p-input-icon-right' : '', label ? 'p-float-label' : ''].join(' ');
+  const id = generateID();
 
   return (
     <>
       <span className={iconClassList}>
-
         <PRInputText
+          id={`tc-input-${id}`}
           className={classList}
           placeholder={placeholder}
           value={value}
@@ -57,6 +61,10 @@ export const InputText = ({
         {
           error ?
             <small className="p-error block">{error}</small> : ''
+        }
+        {
+          label ?
+            <label htmlFor={`tc-input-${id}`}>{label}</label> : ''
         }
       </span>
     </>
