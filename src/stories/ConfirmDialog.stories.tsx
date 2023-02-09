@@ -17,6 +17,8 @@ const Template: ComponentStory<typeof ConfirmDialog> = (args: any) => {
     const reject = () => alert("Rejected");
     const ref = useRef({} as any);
 
+    setTimeout(() => ref.current?.show({ ...args }), 0);
+
     return (
         <>
             <ConfirmDialog childRef={ref} accept={accept} reject={reject}/>
