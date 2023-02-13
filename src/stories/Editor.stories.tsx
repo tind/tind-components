@@ -14,11 +14,18 @@ export default {
 const Template: ComponentStory<typeof Editor> = (args: any) => {
     const [_value, _setValue] = useState<string>('');
     return (
-        <div style={{width: "900px"}}>
+        <div style={{width: args.width}}>
             <Editor {...args} value={_value} onChange={(e) => _setValue(e.htmlValue ? e.htmlValue : '')} className={"editor-height"} />
         </div>
     );
 }
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Desktop = Template.bind({});
+Desktop.args = {
+    width: "900px"
+};
+
+export const Mobile = Template.bind({});
+Mobile.args = {
+    width: "338px" // 338
+};
