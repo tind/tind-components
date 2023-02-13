@@ -24,9 +24,6 @@ export const Heading = ({
             case 5: {
                 return <h5>{children}</h5>
             }
-            case 6: {
-                return <h6>{children}</h6>
-            }
             default: 
                 return <h1>{children}</h1>
         }

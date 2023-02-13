@@ -45,9 +45,3 @@ Heading5.args = {
     ...defaultArgs,
     size: 5
 };
-
-export const Heading6 = Template.bind({});
-Heading6.args = {
-    ...defaultArgs,
-    size: 6
-};
