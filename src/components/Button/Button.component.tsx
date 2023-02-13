@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, LegacyRef } from "react";
 import './Button.component.css';
 import { Button as PRButton } from 'primereact/button';
  
@@ -10,7 +10,7 @@ interface ButtonProps {
   outlined?: boolean;
   label?: string;
   icon?: string;
-  iconPosition?: 'left' | 'right'
+  iconPosition?: 'left' | 'right';
   onClick?: () => void;
 }
 
