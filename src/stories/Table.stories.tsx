@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Table, Column } from '../components/Table';
 import * as tableDataSmall from './demo/assets/table-data-small.json';
 import * as tableDataMedium from './demo/assets/table-data-medium.json';
+import { disableArg } from './assets/helpers';
 
 import { Button } from '../components/Button';
 import { ButtonSet } from '../components/ButtonSet';
@@ -14,6 +15,14 @@ import "primereact/resources/primereact.min.css";
 export default {
     title: 'Components/Table',
     component: Table,
+    argTypes: {
+        ...disableArg("data"),
+        ...disableArg("header"),
+        ...disableArg("footer"),
+        ...disableArg("paginator"),
+        ...disableArg("selection"),
+        ...disableArg("onSelectionChange")
+    }
 } as ComponentMeta<typeof Table>;
 
 const DefaultTemplate: ComponentStory<typeof Table> = (args) => {
@@ -140,7 +149,7 @@ const DynamicTemplate: ComponentStory<typeof Table> = (args: DynamicProps | any)
     }
 
     return (
-        <Table data={tableData} onSelectionChange={args.withSelection ? (e: any) => setSelection(e.value) : () => {}} paginator={args.withPaginator}>
+        <Table data={tableData} selection={args.withSelection ? selection : null} onSelectionChange={args.withSelection ? (e: any) => setSelection(e.value) : () => {}} paginator={args.withPaginator}>
             { args.withSelection ? <Column selectionMode="multiple"></Column> : <></> }
             { getTableColumns(args.columns) }
             { args.withActions ? <Column body={tableActions}></Column> : <></> }
