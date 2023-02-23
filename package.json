@@ -1,6 +1,6 @@
 {
   "name": "@tindtechnologies/tind-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "start": "nodemon",
     "build": "npm run build:mac",
@@ -44,5 +44,6 @@
   "bugs": {
     "url": "https://github.com/tind/tind-components/issues"
   },
-  "homepage": "https://github.com/tind/tind-components#readme"
+  "homepage": "https://github.com/tind/tind-components#readme",
+  "type": "module"
 }
