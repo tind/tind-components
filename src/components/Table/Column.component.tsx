@@ -1,5 +1,4 @@
 import React from "react";
-import './Table.component.css';
 import { Column as PRColumn } from 'primereact/column';
 
 interface ColumnProps {

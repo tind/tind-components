@@ -1,5 +1,4 @@
 import React from "react";
-import './Table.component.css';
 import { DataTable } from 'primereact/datatable';
 
 interface TableProps {

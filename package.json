@@ -1,6 +1,6 @@
 {
   "name": "@tindtechnologies/tind-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "start": "nodemon",
     "build": "npm run build:mac && node copy-files.cjs",
