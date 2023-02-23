@@ -1,6 +1,6 @@
 {
   "name": "@tindtechnologies/tind-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "start": "nodemon",
     "build": "npm run build:mac",

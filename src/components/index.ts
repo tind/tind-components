@@ -1,3 +1,5 @@
+export * from './Table/index';
+
 export function generateID(length: number = 3) {
     let result = '', counter = 0;
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
