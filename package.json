@@ -1,9 +1,9 @@
 {
   "name": "@tindtechnologies/tind-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "start": "nodemon",
-    "build": "npm run build:mac",
+    "build": "npm run build:mac && node copy-files.cjs",
     "build:windows": "rmdir /s dist && tsc && copy package.json dist && copy README.md dist",
     "build:mac": "rm -rf ./dist && tsc && cp package.json ./dist && cp README.md ./dist",
     ":publish": "npm publish ./dist",
