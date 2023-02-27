@@ -1,8 +1,5 @@
 import React, { createRef, LegacyRef } from "react";
-import './Button.component.css';
 import { Button as PRButton } from 'primereact/button';
- 
-import "primeicons/primeicons.css";
 
 interface ButtonProps {
   type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'help';

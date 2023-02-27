@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import './AutoComplete.component.css';
-import { AutoComplete as PRAutoComplete, AutoCompleteCompleteMethodParams, AutoCompleteChangeParams } from 'primereact/autocomplete';
+import { 
+    AutoComplete as PRAutoComplete, 
+    AutoCompleteCompleteMethodParams, 
+    AutoCompleteChangeParams 
+} from 'primereact/autocomplete';
 
 interface AutoCompleteProps {
     suggestions: any[];
